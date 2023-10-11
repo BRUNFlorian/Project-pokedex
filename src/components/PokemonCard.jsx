@@ -1,20 +1,8 @@
 import React from "react";
 
-const pokemonList = [
-  {
-    name: "bulbasaur",
-    imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-  },
+function PokemonCard(props) {
+  const pokemon = props.pokemon[0];
 
-  {
-    name: "mew",
-  },
-];
-
-const pokemon = pokemonList[0];
-
-const PokemonCard = () => {
   const showImg = (pokemon) => {
     if (pokemon.imgSrc === undefined) {
       return <p>???</p>;
@@ -29,6 +17,6 @@ const PokemonCard = () => {
       <figcaption>{pokemon.name}</figcaption>
     </figure>
   );
-};
+}
 
 export default PokemonCard;
