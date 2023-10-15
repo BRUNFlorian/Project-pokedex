@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 function PokemonCard(props) {
-  const pokemon = props.pokemon[0];
-
+  let pokemon = props.pokemon[props.pokemonIndex];
   const showImg = (pokemon) => {
     if (pokemon.imgSrc === undefined) {
       return <p>???</p>;
